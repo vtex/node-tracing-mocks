@@ -6,11 +6,20 @@ import { MockSpan } from './MockSpan'
 export class MockUserlandTracer {
   public fallbackSpan: MockSpan
   public mockTracer: MockOpentracingTracer
+  public traceSampled: boolean = true
 
   constructor() {
     this.mockTracer = new MockOpentracingTracer()
     this.fallbackSpan = this.mockTracer.startSpan('fallback-span') as MockSpan
     this.fallbackSpan.finish()
+  }
+
+  get isTraceSampled() {
+    return this.traceSampled
+  }
+
+  get traceId() {
+    return this.fallbackSpan.context().toTraceId()
   }
 
   public startSpan(name: string, options?: SpanOptions) {
