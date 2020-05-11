@@ -6,7 +6,7 @@ import { MockSpan } from './MockSpan'
 export class MockUserlandTracer {
   public fallbackSpan: MockSpan
   public mockTracer: MockOpentracingTracer
-  public traceSampled: boolean = true
+  public traceSampled = true
 
   constructor() {
     this.mockTracer = new MockOpentracingTracer()
@@ -14,11 +14,11 @@ export class MockUserlandTracer {
     this.fallbackSpan.finish()
   }
 
-  get isTraceSampled() {
+  public get isTraceSampled() {
     return this.traceSampled
   }
 
-  get traceId() {
+  public get traceId() {
     return this.fallbackSpan.context().toTraceId()
   }
 
