@@ -7,5 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.2] - 2020-05-11
+- [MockUserlandTracer] Add `traceId` and `isTraceSampled`.
 
 ## [0.0.1] - 2020-04-23
