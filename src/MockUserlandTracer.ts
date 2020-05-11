@@ -1,9 +1,10 @@
+import { IUserLandTracer } from '@vtex/api'
 import { Span, SpanContext, SpanOptions } from 'opentracing'
 
 import { MockOpentracingTracer } from './MockOpentracingTracer'
 import { MockSpan } from './MockSpan'
 
-export class MockUserlandTracer {
+export class MockUserlandTracer implements IUserLandTracer {
   public fallbackSpan: MockSpan
   public mockTracer: MockOpentracingTracer
   public traceSampled = true
