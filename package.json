@@ -1,6 +1,6 @@
 {
   "name": "@vtex/node-tracing-mocks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "@vtex/api tracing mocks for node apps",
   "repository": {
     "type": "git",
